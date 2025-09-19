@@ -1,7 +1,21 @@
+:root {
+  --clr-background: hsl(33, 75, 70);
+  --clr-item: hsl(224, 38, 70);
+}
+
 body,
 html {
   /* height:100%; */
 
   margin: 0px;
   padding: 0px;
+}
+
+/**/
+header, main, footer {
+  display: grid;
+  gap: 5px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 100%;
+  margin: 50px;
 }
