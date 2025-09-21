@@ -1,6 +1,6 @@
 :root {
   --clr-off-white: hsl(36, 100%, 99%);
-  --clr-background: hsl(74, 27%, 90%);
+  --clr-background: hsl(145, 35%, 87%);
   --clr-shadow: hsla(87, 5%, 43%, 0.801);
 }
 
@@ -25,13 +25,10 @@ header, main, footer {
 /*---Header---*/
 header {
   display: flex;
-  position: sticky;
-  top: 0;
-  z-index: 10;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0% 3% 0% 3%;
+  padding: .5% 3% .5% 3%;
   margin-bottom: 2%;
   background-color: var(--clr-off-white);
   height: 5vh;
@@ -72,7 +69,7 @@ main {
   margin: 2%;
 }
 
-main div {
+main .store-item {
   margin: 2%;
   border: 1px solid grey;
   border-radius: 2%;
@@ -107,13 +104,17 @@ main div {
   margin-top: 10%;
 }
 
-.store-item span {
-  display: inline-block;
+.store-item .span-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 10%;
 }
 
-main div img {
+main .store-item img {
   max-width: 100%;
-  height: 27.5vh;
+  max-height: 27.5vh;
 }
 
 
@@ -123,4 +124,26 @@ footer {
   padding-top: 2%;
   background-color: var(--clr-off-white);
   border-top: 1px solid var(--clr-shadow);
+}
+
+
+/*---Media Queries---*/
+@media screen and (max-width: 1080px) {
+  main {
+    grid-template-columns: .9fr .9fr;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header h1 {
+    font-size: 1.2em;
+  }
+
+  header ul li {
+    font-size: .75em;
+  }
+
+  main {
+    grid-template-columns: .9fr;
+  }
 }
